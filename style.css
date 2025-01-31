@@ -143,9 +143,10 @@ h1 {
 }
 
 .info-img-container {
-    display: grid;
+    display: flex;
+    flex-direction: column;  /* This makes items stack vertically */
     gap: 2rem;
-    max-width: 1200px;
+    max-width: 400px;  /* Match the image width */
     margin: 2rem auto;
     padding: 0 2rem;
 }
