@@ -153,15 +153,21 @@ footer {
 
     /* Blog Section */
     .cal-posted-content {
-        display: block;
-        padding: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center; /* Center aligns all child elements */
+        text-align: center; /* Ensures text is centered inside */
     }
-
+    
     .image-post-content-a, 
     .image-post-content-b, 
     .image-post-content-c {
         width: 100%;
-        max-width: 100%;
+        max-width: 432px; /* Match mobile width */
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Centers text inside each block */
+        text-align: center;
     }
 
     /* Portfolio */
