@@ -1,194 +1,206 @@
-/* General Styles */
-body {
-    font-family: Arial, sans-serif;
+/* Reset and Base Styles */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-/* Header */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Header Styles */
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    background: #222;
-    color: white;
+    width: 100%;
+    padding: 1rem;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 .nav--container {
+    max-width: 1200px;
+    margin: 0 auto;
     display: flex;
-    align-items: center;
-    width: 100%;
     justify-content: space-between;
+    align-items: center;
+}
+
+.nav--container h2 {
+    font-size: 1.5rem;
+    color: #333;
 }
 
 nav ul {
     display: flex;
     list-style: none;
-    padding: 0;
+    gap: 1.5rem;
 }
 
-nav ul li {
-    margin: 0 15px;
+nav a {
+    text-decoration: none;
+    color: #333;
+    cursor: pointer;
 }
 
 /* Hero Section */
 .hero--container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 20px;
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
 }
 
 .hero--card {
-    font-size: 1.5em;
-    margin-bottom: 10px;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #333;
 }
 
-/* Services Section */
+/* Web Info Content Section */
 .web-info-content--container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    padding: 20px;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .web-info-content-fill {
-    background: #f4f4f4;
-    padding: 20px;
-    border-radius: 5px;
+    margin: 2rem 0;
+    padding: 1.5rem;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-/* Latest Work (Blog Section) */
+/* Calendar Section */
+.cal-info-content--container {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
 .cal-posted-content {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
 }
 
-.image-post-content-a, 
-.image-post-content-b, 
-.image-post-content-c {
-    width: 100%;
-    max-width: 432px; /* Match mobile width */
+/* Image Info Section */
+.img-info-content {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-/* Portfolio */
 .info-img-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 10px;
-    padding: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 2rem;
 }
 
-/* Footer */
+/* Footer Styles */
 footer {
-    background: #222;
-    color: white;
-    padding: 20px;
-    text-align: center;
+    background: #333;
+    color: #fff;
+    padding: 2rem 0;
 }
 
-/* ---- Responsive Media Queries ---- */
+.footer-sections--container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
 
-/* Tablets (768px and below) */
-@media screen and (max-width: 768px) {
-    header {
+/* Media Queries */
+@media screen and (max-width: 432px) {
+    .nav--container {
         flex-direction: column;
         text-align: center;
     }
 
     nav ul {
         flex-direction: column;
-        text-align: center;
-    }
-
-    .web-info-content--container {
-        grid-template-columns: 1fr;
-    }
-
-    .info-img-container {
-        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    }
-}
-
-/* Mobile (432px width, 4722px height optimization) */
-@media screen and (max-width: 432px) {
-    header {
-        flex-direction: column;
-        padding: 15px;
-        text-align: center;
-    }
-
-    .hero--container {
-        padding: 10px;
+        align-items: center;
+        gap: 1rem;
     }
 
     .hero--card {
-        font-size: 1.2em;
-        margin-bottom: 5px;
-    }
-
-    nav ul {
-        flex-direction: column;
-        padding: 0;
-        text-align: center;
-    }
-
-    nav ul li {
-        margin: 10px 0;
-    }
-
-    /* Services Section */
-    .web-info-content--container {
-        display: block;
-        padding: 10px;
+        font-size: 1.5rem;
     }
 
     .web-info-content-fill {
-        margin-bottom: 15px;
+        margin: 1rem 0;
+        padding: 1rem;
     }
 
-    /* Blog Section */
-    .cal-posted-content {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center; /* Center aligns all child elements */
-        text-align: center; /* Ensures text is centered inside */
-    }
-    
-    .image-post-content-a, 
-    .image-post-content-b, 
-    .image-post-content-c {
-        width: 100%;
-        max-width: 432px; /* Match mobile width */
-        display: flex;
-        flex-direction: column;
-        align-items: center; /* Centers text inside each block */
-        text-align: center;
-    }
-
-    /* Portfolio */
     .info-img-container {
         grid-template-columns: 1fr;
     }
 
-    /* Footer Adjustments */
     .footer-sections--container {
-        flex-direction: column;
-        text-align: center;
-        padding: 10px;
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (min-width: 433px) and (max-width: 768px) {
+    .nav--container {
+        padding: 0 1rem;
     }
 
-    .about-us, .instagram-photos, .whats-new-content, .track-us-content {
-        margin-bottom: 20px;
+    nav ul {
+        gap: 1rem;
     }
 
-    .enter-email {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+    .cal-posted-content {
+        grid-template-columns: repeat(2, 1fr);
     }
+
+    .info-img-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .cal-posted-content {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .info-img-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Utility Classes */
+.subtitle {
+    color: #666;
+    margin-bottom: 1.5rem;
+}
+
+.yellow-thin-line,
+.teal-super-thin-line,
+.blue-super-thin-line,
+.yellow-super-thin-line,
+.blue-short-super-thin-line {
+    height: 2px;
+    margin: 1rem 0;
+}
+
+/* Button Styles */
+.email-send-button {
+    padding: 0.5rem 1rem;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.email-send-button:hover {
+    background: #0056b3;
 }
