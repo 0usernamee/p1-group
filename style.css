@@ -1,0 +1,217 @@
+/* Media Queries */
+@media screen and (max-width: 432px) {
+    .nav--container {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .web-info-content-fill {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .cal-posted-content {
+        grid-template-columns: 1fr;
+    }
+
+    .info-img-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (min-width: 433px) and (max-width: 768px) {
+    .cal-posted-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .info-img-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .cal-posted-content {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .info-img-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Header & Navigation */
+.nav--container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+.nav--container h2 {
+    color: #4ECDC4; /* Aqua-like blue */
+    margin-right: auto;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+/* Hero Section */
+h1 {
+    text-align: center;
+    max-width: 800px;
+    margin: 3rem auto;
+    color: #4ECDC4;
+    line-height: 1.4;
+}
+
+/* Things We Do Section */
+.web-info-content--container {
+    text-align: center;
+    padding: 3rem 0;
+}
+
+.web-info-content--container h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.subtitle {
+    color: #666;
+    margin-bottom: 3rem;
+}
+
+.web-info-content-fill {
+    display: flex;
+    align-items: flex-start;
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1rem;
+}
+
+.web-info-icon {
+    width: 80px;
+    height: 84px;
+    margin-right: 2rem;
+}
+
+.web-info-content-fill h4 {
+    text-align: left;
+    margin-bottom: 1rem;
+}
+
+.web-info-content--text {
+    text-align: left;
+}
+
+/* What's Up Lately Section */
+.cal-info-content--container {
+    text-align: center;
+    padding: 3rem 0;
+}
+
+.cal-info-content--container h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.cal-background-img {
+    width: 400px;
+    height: 288px;
+    object-fit: cover;
+}
+
+/* Our Best Work Section */
+.img-info-content {
+    text-align: center;
+    padding: 3rem 0;
+}
+
+.info-img-container {
+    display: flex;
+    flex-direction: column;  /* This makes items stack vertically */
+    gap: 2rem;
+    max-width: 400px;  /* Match the image width */
+    margin: 2rem auto;
+    padding: 0 2rem;
+}
+
+.info-img-container img {
+    width: 400px;
+    height: 288px;
+    object-fit: cover;
+}
+
+/* Footer */
+footer {
+    background-color: #2D3E50;
+    color: white;
+    padding: 3rem 2rem;
+}
+
+.creator-intro-content--container {
+    display: flex;
+    align-items: flex-start;
+    max-width: 800px;
+    margin: 0 auto 3rem;
+}
+
+.Creater-intro-img {
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    margin-right: 2rem;
+}
+
+.yellow-thin-line {
+    height: 2px;
+    background-color: #F1C40F;
+    margin: 2rem 0;
+}
+
+.whats-new-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.whats-new-h4 {
+    color: #4ECDC4;
+    text-align: right;
+    margin-bottom: 1rem;
+}
+
+.yellow-super-thin-line {
+    height: 1px;
+    background-color: #F1C40F;
+    margin: 1rem 0;
+}
+
+.whats-new-text {
+    margin-bottom: 2rem;
+}
+
+.blue-text-highlight {
+    color: #4ECDC4;
+}
+
+.enter-email {
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
