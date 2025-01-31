@@ -1,162 +1,25 @@
-/* Reset and Base Styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-}
-
-/* Header Styles */
-header {
-    width: 100%;
-    padding: 1rem;
-    background-color: #fff;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-.nav--container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.nav--container h2 {
-    font-size: 1.5rem;
-    color: #333;
-}
-
-nav ul {
-    display: flex;
-    list-style: none;
-    gap: 1.5rem;
-}
-
-nav a {
-    text-decoration: none;
-    color: #333;
-    cursor: pointer;
-}
-
-/* Hero Section */
-.hero--container {
-    position: relative;
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 2rem;
-}
-
-.hero--card {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    color: #333;
-}
-
-/* Web Info Content Section */
-.web-info-content--container {
-    padding: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.web-info-content-fill {
-    margin: 2rem 0;
-    padding: 1.5rem;
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-/* Calendar Section */
-.cal-info-content--container {
-    padding: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.cal-posted-content {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1.5rem;
-    margin-top: 2rem;
-}
-
-/* Image Info Section */
-.img-info-content {
-    padding: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.info-img-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1rem;
-    margin-top: 2rem;
-}
-
-/* Footer Styles */
-footer {
-    background: #333;
-    color: #fff;
-    padding: 2rem 0;
-}
-
-.footer-sections--container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 2rem;
-}
-
 /* Media Queries */
 @media screen and (max-width: 432px) {
     .nav--container {
         flex-direction: column;
-        text-align: center;
-    }
-
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-        gap: 1rem;
-    }
-
-    .hero--card {
-        font-size: 1.5rem;
+        padding: 1rem;
     }
 
     .web-info-content-fill {
-        margin: 1rem 0;
-        padding: 1rem;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .cal-posted-content {
+        grid-template-columns: 1fr;
     }
 
     .info-img-container {
         grid-template-columns: 1fr;
     }
-
-    .footer-sections--container {
-        grid-template-columns: 1fr;
-    }
 }
 
 @media screen and (min-width: 433px) and (max-width: 768px) {
-    .nav--container {
-        padding: 0 1rem;
-    }
-
-    nav ul {
-        gap: 1rem;
-    }
-
     .cal-posted-content {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -176,31 +39,178 @@ footer {
     }
 }
 
-/* Utility Classes */
-.subtitle {
-    color: #666;
-    margin-bottom: 1.5rem;
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.yellow-thin-line,
-.teal-super-thin-line,
-.blue-super-thin-line,
-.yellow-super-thin-line,
-.blue-short-super-thin-line {
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Header & Navigation */
+.nav--container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+.nav--container h2 {
+    color: #4ECDC4; /* Aqua-like blue */
+    margin-right: auto;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+/* Hero Section */
+h1 {
+    text-align: center;
+    max-width: 800px;
+    margin: 3rem auto;
+    color: #4ECDC4;
+    line-height: 1.4;
+}
+
+/* Things We Do Section */
+.web-info-content--container {
+    text-align: center;
+    padding: 3rem 0;
+}
+
+.web-info-content--container h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.subtitle {
+    color: #666;
+    margin-bottom: 3rem;
+}
+
+.web-info-content-fill {
+    display: flex;
+    align-items: flex-start;
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1rem;
+}
+
+.web-info-icon {
+    width: 80px;
+    height: 84px;
+    margin-right: 2rem;
+}
+
+.web-info-content-fill h4 {
+    text-align: left;
+    margin-bottom: 1rem;
+}
+
+.web-info-content--text {
+    text-align: left;
+}
+
+/* What's Up Lately Section */
+.cal-info-content--container {
+    text-align: center;
+    padding: 3rem 0;
+}
+
+.cal-info-content--container h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.cal-background-img {
+    width: 400px;
+    height: 288px;
+    object-fit: cover;
+}
+
+/* Our Best Work Section */
+.img-info-content {
+    text-align: center;
+    padding: 3rem 0;
+}
+
+.info-img-container {
+    display: grid;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+}
+
+.info-img-container img {
+    width: 400px;
+    height: 288px;
+    object-fit: cover;
+}
+
+/* Footer */
+footer {
+    background-color: #2D3E50;
+    color: white;
+    padding: 3rem 2rem;
+}
+
+.creator-intro-content--container {
+    display: flex;
+    align-items: flex-start;
+    max-width: 800px;
+    margin: 0 auto 3rem;
+}
+
+.Creater-intro-img {
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    margin-right: 2rem;
+}
+
+.yellow-thin-line {
     height: 2px;
+    background-color: #F1C40F;
+    margin: 2rem 0;
+}
+
+.whats-new-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.whats-new-h4 {
+    color: #4ECDC4;
+    text-align: right;
+    margin-bottom: 1rem;
+}
+
+.yellow-super-thin-line {
+    height: 1px;
+    background-color: #F1C40F;
     margin: 1rem 0;
 }
 
-/* Button Styles */
-.email-send-button {
-    padding: 0.5rem 1rem;
-    background: #007bff;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+.whats-new-text {
+    margin-bottom: 2rem;
 }
 
-.email-send-button:hover {
-    background: #0056b3;
+.blue-text-highlight {
+    color: #4ECDC4;
+}
+
+.enter-email {
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
 }
