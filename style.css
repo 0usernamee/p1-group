@@ -1,4 +1,4 @@
-/* Base Styles (Desktop First) */
+/* General Styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -20,10 +20,6 @@ header {
     align-items: center;
     width: 100%;
     justify-content: space-between;
-}
-
-.nav--container h2 {
-    margin: 0;
 }
 
 nav ul {
@@ -50,7 +46,7 @@ nav ul li {
     margin-bottom: 10px;
 }
 
-/* Main Content */
+/* Services Section */
 .web-info-content--container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -64,7 +60,22 @@ nav ul li {
     border-radius: 5px;
 }
 
-/* Image Gallery */
+/* Latest Work (Blog Section) */
+.cal-posted-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.image-post-content-a, 
+.image-post-content-b, 
+.image-post-content-c {
+    width: 100%;
+    max-width: 432px; /* Match mobile width */
+}
+
+/* Portfolio */
 .info-img-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -103,7 +114,7 @@ footer {
     }
 }
 
-/* Mobile (432px width, long height optimization) */
+/* Mobile (432px width, 4722px height optimization) */
 @media screen and (max-width: 432px) {
     header {
         flex-direction: column;
@@ -130,6 +141,7 @@ footer {
         margin: 10px 0;
     }
 
+    /* Services Section */
     .web-info-content--container {
         display: block;
         padding: 10px;
@@ -139,20 +151,22 @@ footer {
         margin-bottom: 15px;
     }
 
+    /* Blog Section */
+    .cal-posted-content {
+        display: block;
+        padding: 10px;
+    }
+
+    .image-post-content-a, 
+    .image-post-content-b, 
+    .image-post-content-c {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    /* Portfolio */
     .info-img-container {
         grid-template-columns: 1fr;
-    }
-
-    .cal-posted-content {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .software-content-imgs--container {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 10px;
-        padding: 10px;
     }
 
     /* Footer Adjustments */
