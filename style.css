@@ -136,6 +136,41 @@ h1 {
     object-fit: cover;
 }
 
+.image-post-content {
+    position: relative;
+    display: inline-block;
+    width: 400px;
+    margin-bottom: 20px;
+}
+.cal-overlay{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background:#19B2DE;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.date-box {
+    background: #c04d4d;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.small-nested-icon {
+    width: 20px;
+    height: 20px;
+    background: rgba(0, 100, 150, 0.9);
+}
+
+
 /* Our Best Work Section */
 .img-info-content {
     text-align: center;
