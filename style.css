@@ -9,13 +9,15 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Ubuntu', sans-serif;
     line-height: 1.6;
+
 }
 
 /* Header & Navigation */
 .navbar {
     display: flex;
+
     width: 100vw;
 
     background-color: white; 
@@ -38,6 +40,7 @@ body {
     padding-right: 18px;
     transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
 }
+
 
 
 .Nav-BTN-1{
@@ -249,6 +252,7 @@ h1 {
     z-index: 1;
 }
 
+
 /* Clients*/
 
 .software-contents-imgs--container{
@@ -269,6 +273,7 @@ h1 {
     align-items: center;
     justify-content: center;
 }
+
 
 
 /* Footer */
@@ -331,10 +336,7 @@ footer {
 }
 
 @media screen and (max-width: 432px) {
-    .nav--container {
-        flex-direction: column;
-        padding: 1rem;
-    }
+    
 
     .web-info-content-fill {
         flex-direction: column;
@@ -344,13 +346,23 @@ footer {
     .cal-posted-content {
         grid-template-columns: 1fr;
     }
-}
+
+    .hero--img-background {
+        display: none;
+    }
+
 
 @media screen and (min-width: 433px) and (max-width: 768px) { /* mobile won't show up unless you make it bigger*/
     .cal-posted-content,
     .info-img-container {
         grid-template-columns: repeat(2, 1fr); /* 2 columns */
     }
+
+.hero--img-background {
+
+    padding: 0 15px 0 15px;
+    background-color: #EBEBEB;
+    width: 100%;
 }
 
 @media screen and (min-width: 769px) {
@@ -368,7 +380,6 @@ footer {
     }
     .nav-header {
         display: flex;
-        align-items: left;
         justify-content: left;
         
     }
@@ -381,8 +392,7 @@ footer {
     .navbar a {
         font-size: 16px;
         padding-left:16px;
-        justify-content: left;
-        align-items: left;
+        justify-content: left; 
     }
 
     .logo {
@@ -391,3 +401,12 @@ footer {
     }
     
 }
+
+
+    .hero--img-background {
+        padding: 0 150px 0 150px;
+        background-color: #EBEBEB;
+        width: 100%;
+    }
+}
+
