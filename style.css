@@ -8,15 +8,18 @@
     box-sizing: border-box;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Ubuntu', sans-serif;
     line-height: 1.6;
+
 }
 
 /* Header & Navigation */
 .nav--container {
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     padding: 2rem;
     margin-bottom: 2rem;
@@ -24,7 +27,7 @@ body {
 
 .nav--container h2 {
     color: #4ECDC4; /* Aqua-like blue */
-    margin-right: auto;
+    margin: auto;
 }
 
 nav ul {
@@ -194,7 +197,6 @@ h1 {
     z-index: 1;
 }
 
-
 /* Footer */
 footer {
     background-color: #2D3E50;
@@ -255,10 +257,7 @@ footer {
 }
 
 @media screen and (max-width: 432px) {
-    .nav--container {
-        flex-direction: column;
-        padding: 1rem;
-    }
+    
 
     .web-info-content-fill {
         flex-direction: column;
@@ -268,13 +267,23 @@ footer {
     .cal-posted-content {
         grid-template-columns: 1fr;
     }
-}
+
+    .hero--img-background {
+        display: none;
+    }
+
 
 @media screen and (min-width: 433px) and (max-width: 768px) { /* mobile won't show up unless you make it bigger*/
     .cal-posted-content,
     .info-img-container {
         grid-template-columns: repeat(2, 1fr); /* 2 columns */
     }
+
+.hero--img-background {
+
+    padding: 0 15px 0 15px;
+    background-color: #EBEBEB;
+    width: 100%;
 }
 
 @media screen and (min-width: 769px) {
@@ -289,5 +298,11 @@ footer {
         max-width: 900px; /* Prevent stretching */
         margin: auto;
         gap: 1rem; /* Space between grid items */
+    }
+
+    .hero--img-background {
+        padding: 0 150px 0 150px;
+        background-color: #EBEBEB;
+        width: 100%;
     }
 }
