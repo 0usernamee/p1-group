@@ -1,0 +1,523 @@
+/* Media Queries */
+
+
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+    line-height: 1.6;
+
+}
+
+/* Header & Navigation */
+.navbar {
+    display: flex;
+
+    width: 100vw;
+
+    background-color: white; 
+
+    height: 64px; 
+
+    padding: 0;
+    margin: 0;
+} 
+
+.navbar a {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+    color: white;
+    font-size: 16px;
+    padding-left:16px;
+    padding-top: 36px; 
+    padding-right: 18px;
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+
+
+.Nav-BTN-1{
+    background-color:#25C389;
+    
+}
+.Nav-BTN-2{
+    background-color:#FFB901;
+    ;
+    
+}
+.Nav-BTN-3{
+    background-color:#DE6262;
+    ;
+    
+}
+.Nav-BTN-4{
+    background-color:#19B2DE;
+    ;
+    
+}.Nav-BTN-5{
+    background-color:#265787;
+    ;
+}
+.navbar a:hover {
+    background-color:#F0F08C;
+    ;
+    color: black;
+     /* Optional, for smooth rounded hover effect */
+}
+
+.nav-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    padding: 10px 0;}
+
+.nav-header h1 {
+    font-size: 32px;
+    font-weight: bold;
+    color: #333; 
+    margin: 0;}
+    
+.nav-header .logo {
+        width: 24px;
+        height: 24px;
+ margin: 1%;
+       }
+
+/* Hero Section */
+h1 {
+    text-align: center;
+    max-width: 800px;
+    margin: 3rem auto;
+    color: #4ECDC4;
+    line-height: 1.4;
+}
+
+/* Things We Do Section */
+.web-info-content--container {
+    text-align: center;
+    padding: 3rem 0;
+}
+
+.web-info-content--container h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.subtitle {
+    color: #666;
+    margin-bottom: 3rem;
+}
+
+.web-info-content-fill {
+    display: flex;
+    align-items: flex-start;
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1rem;
+}
+
+.web-info-icon {
+    width: 80px;
+    height: 84px;
+    margin-right: 2rem;
+}
+
+.web-info-content-fill h4 {
+    text-align: left;
+    margin-bottom: 1rem;
+}
+
+.web-info-content--text {
+    text-align: left;
+}
+
+/* What's Up Lately Section */
+.cal-info-content--container {
+    text-align: center;
+    padding: 3rem 0;
+}
+
+.cal-info-content--container h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.cal-background-img {
+    width: 400px;
+    height: 288px;
+    object-fit: cover;
+}
+
+.image-post-content {
+    position: relative;
+    display: inline-block;
+    width: 400px;
+    margin-bottom: 20px;
+}
+.cal-overlay{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background:#19B2DE;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.date-box {
+    background: #c04d4d;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.small-nested-icon {
+    width: 20px;
+    height: 20px;
+    background: rgba(0, 100, 150, 0.9);
+}
+
+
+/* Our Best Work Section */
+.img-info-content {
+    text-align: center;
+    padding: 3rem 0;
+}
+
+.info-img-container {
+    display: grid;
+    grid-template-columns: 1fr; 
+    gap: 1rem;
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+}
+
+
+
+/* Ensure images fit inside the grid */
+.image-wrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4/3; /* Keeps images proportional */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Default image */
+.default-image,
+.hover-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.default-image {
+    opacity: 1;
+    z-index: 2;
+}
+
+.hover-image {
+    opacity: 0;
+    z-index: 1;
+}
+
+/* Hover effect */
+.image-wrapper:hover .hover-image {
+    opacity: 1;
+    z-index: 2;
+}
+
+.image-wrapper:hover .default-image {
+    opacity: 0;
+    z-index: 1;
+}
+
+.software-info-content {
+text-align: center;
+}
+
+.software-content-imgs--container {
+    display: flex;
+    justify-content: center;
+    flex-wrap:wrap;
+}
+
+.software-img img {
+    background-color: #EBEBEB;
+    margin: 0 25px 0 25px;
+    object-fit: contain;
+    width: 179px;
+    height: 128px;
+}
+
+
+/* Footer */
+/* Footer Base Styles */
+footer {
+    background-color: #2D3E50;
+    color: white;
+    padding: 3rem 2rem;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Creator Section */
+.creator-intro-content {
+    display: flex;
+    align-items: center;
+    max-width: 800px;
+    margin-bottom: 2rem;
+}
+
+.creator-intro-img {
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    margin-right: 1rem;
+}
+
+/* Footer Sections */
+.footer-sections {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+}
+
+/* Instagram Grid */
+.instagram-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.instagram-grid img {
+    width: 60px;
+    height: 60px;
+}
+
+.email-send-button {
+    background-color: #F1C40F;
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+}
+
+/* Footer Color Blocks */
+.footer-colors {
+    display: flex;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.footer-colors div {
+    height: 5px;
+    flex-grow: 1;
+}
+
+.green-footer-box{
+    background: #25C389;
+
+}
+
+.yellow-footer-box{
+    background: #FFB901;
+
+}
+
+.red-footer-box{
+    background: #DE6262;
+
+
+}
+
+.sky-blue-footer-box{
+    background: #1691BD;
+
+}
+
+.blue-footer-box{
+    background: #166BA2;
+
+}
+
+/* Track Us Section */
+.track-us {
+    background-color: #2D3E50; /* Dark footer background */
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    width: 100%;
+    max-width: 250px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+/* Track Us Form */
+.track-us-form {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0.5rem;
+}
+
+.track-us-form input {
+    padding: 0.5rem;
+    border: none;
+    border-radius: 4px;
+    width: 70%;
+}
+
+.email-send-button {
+    background-color: #F1C40F;
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+/* Track Us Color Blocks */
+.track-us-colors {
+    display: flex;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.track-us-colors div {
+    height: 5px;
+    flex-grow: 1;
+}
+
+.track-green {
+    background: #25C389;
+}
+
+.track-yellow {
+    background: #FFB901;
+}
+
+.track-red {
+    background: #DE6262;
+}
+
+.track-blue {
+    background: #166BA2;
+}
+
+@media screen and (max-width: 432px) {
+    
+
+    .web-info-content-fill {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .cal-posted-content {
+        grid-template-columns: 1fr;
+    }
+
+    .hero--img-background {
+        display: none;
+    }
+
+    .navbar {
+        display: none;
+    }
+    
+    .software-content-imgs--container {
+display: none;
+    }
+}
+
+@media screen and (min-width: 433px) and (max-width: 768px) { /* mobile won't show up unless you make it bigger*/
+    .cal-posted-content,
+    .info-img-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    }
+
+.hero--img-background {
+
+    padding: 0 15px 0 15px;
+    background-color: #EBEBEB;
+    width: 100%;
+}
+
+.footer-sections {
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.track-us {
+    max-width: 200px;
+}
+
+}
+
+
+@media screen and (min-width: 769px) {
+    .cal-posted-content {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .info-img-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* 2 columns */
+        grid-template-rows: repeat(2, auto); /* 3 rows */
+        max-width: 900px; /* Prevent stretching */
+        margin: auto;
+        gap: 1rem; /* Space between grid items */
+    }
+
+    .hero--img-background {
+        padding: 0 150px 0 150px;
+        background-color: #EBEBEB;
+        width: 100%;
+    }
+    .footer-container {
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+
+    .footer-sections {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        text-align: left;
+    }
+
+    .instagram-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .whats-new {
+        max-width: 300px;
+    }
+}
